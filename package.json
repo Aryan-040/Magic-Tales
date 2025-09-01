@@ -9,16 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroui/react": "^2.8.3",
+    "@nextui-org/button": "^2.2.9",
+    "@nextui-org/navbar": "^2.2.8",
+    "@nextui-org/react": "^2.6.11",
+    "@nextui-org/system": "^2.4.6",
+    "@nextui-org/theme": "^2.4.5",
+    "framer-motion": "^12.23.12",
+    "next": "14.2.9",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.9"
+    "tailwind-variants": "^3.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
