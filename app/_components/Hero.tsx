@@ -1,4 +1,4 @@
-import { Button, Image } from "@nextui-org/react";
+import { Button, Image, Link } from "@nextui-org/react";
 import React from "react";
 
 function Hero() {
@@ -12,13 +12,15 @@ function Hero() {
           </h2>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-xl">
             Every story holds a little magic, waiting to be discovered. With{" "}
-            <span className="font-semibold text-primary">Magic Tales</span>, you
+            <span className="font-semibold text-primary">MagicTales</span>, you
             step into worlds filled with wonder, courage, and endless
             possibilities. From soothing bedtime stories to thrilling
             adventures, our tales are crafted to ignite imagination and bring
             joy to every heart.
           </p>
+          
           <div className="mt-8">
+          <Link href={"/create-story"}>
             <Button
               size="lg"
               color="primary"
@@ -26,6 +28,7 @@ function Hero() {
             >
               Start Imagining ✨
             </Button>
+            </Link>
           </div>
         </div>
 

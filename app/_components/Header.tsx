@@ -11,8 +11,11 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Button, Link } from "@nextui-org/react";
+import { UserButton, useUser } from "@clerk/nextjs";
 
 function Header() {
+
+    const {user,isSignedIn} = useUser();
   const MenuList = [
     {
       name: "Home",
@@ -55,7 +58,7 @@ function Header() {
             className="rounded-full shadow-md"
           />
           <h2 className="text-2xl font-bold text-white tracking-wide">
-            Magic Tales
+            MagicTales
           </h2>
         </NavbarBrand>
       </NavbarContent>
@@ -76,9 +79,13 @@ function Header() {
 
       {/* Right Button */}
       <NavbarContent justify="end" className="hidden sm:flex">
+        <Link href="/dashboard">
         <Button className="rounded-2xl px-6 py-2 font-semibold text-lg shadow-md bg-white text-purple-700 hover:bg-blue-200 transition-all duration-300">
-          Get Started
+            {isSignedIn ? 
+            "Dashboard" : "Get Started"}
         </Button>
+        </Link>
+        <UserButton/>
       </NavbarContent>
       <NavbarMenu>
         {MenuList.map((item, index) => (
