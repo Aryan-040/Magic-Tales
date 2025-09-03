@@ -1,9 +1,10 @@
-import { Button, Image, Link } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
+import Image from "next/image";
 import React from "react";
 
 function Hero() {
   return (
-    <div className="px-6 md:px-20 lg:px-32 mt-16 h-screen">
+    <div className="px-6 md:px-20 lg:px-32 pt-16 h-screen">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         {/* Left Content */}
         <div>
@@ -41,6 +42,7 @@ function Hero() {
               width={700}
               height={400}
               className="rounded-2xl shadow-2xl object-cover hover:scale-105 transition-transform duration-500"
+              priority
             />
           </div>
         </div>

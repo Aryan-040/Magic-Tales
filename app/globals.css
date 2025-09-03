@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #cad3ff;
   --foreground: #171717;
 }
 
