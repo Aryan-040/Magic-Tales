@@ -7,7 +7,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|navbar|ripple|spinner).js"
+    "./node_modules/@nextui-org/theme/dist/components/(button|input|navbar|ripple|spinner|form).js"
   ],
   darkmode:"class",
   theme: {
