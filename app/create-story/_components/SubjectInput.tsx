@@ -25,7 +25,7 @@ function SubjectInput({ userSelection }: { userSelection: UserSelectionHandler }
           </label>
         </div>
 
-        <div className="flex items-center gap-6 overflow-x-hidden">
+        <div className="flex items-center gap-6">
           <div className="relative group/image hidden md:block">
             <Image
               src="/subject.png"
@@ -78,7 +78,10 @@ function SubjectInput({ userSelection }: { userSelection: UserSelectionHandler }
           ].map((hint, index) => (
             <button
               key={index}
-              onClick={() => setInputValue(hint)}
+              onClick={() => { 
+                setInputValue(hint); 
+                userSelection({ fieldName: "storySubject", fieldValue: hint }); 
+              }}
               className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 rounded-full text-sm hover:from-purple-200 hover:to-pink-200 transition-all duration-200 hover:scale-105 border border-purple-200"
             >
               {hint}

@@ -53,14 +53,21 @@ function ImageStyle({ userSelection }: { userSelection: UserSelectionHandler }) 
               key={index}
               className={`relative rounded-3xl overflow-hidden cursor-pointer transition-all duration-500
                 ${selectOption === items.labels 
-                  ? `ring-4 ring-offset-2 shadow-2xl scale-105` 
-                  : `hover:scale-105 shadow-xl hover:shadow-2xl`}`}
+                  ? `ring-4 ring-pink-500 ring-offset-4 shadow-2xl scale-105 bg-pink-50/50 border-4 border-pink-400` 
+                  : `hover:scale-105 shadow-xl hover:shadow-2xl hover:ring-2 hover:ring-pink-300`}`}
               onClick={() => onUserSelect(items)}
             >
               <img src={items.imageUrl} alt={items.labels} className="w-full h-[220px] object-cover" />
-              <div className="absolute bottom-0 w-full bg-black/50 py-3 text-center">
+              <div className={`absolute bottom-0 w-full py-3 text-center transition-all duration-300 ${
+                selectOption === items.labels ? 'bg-pink-600/80' : 'bg-black/50'
+              }`}>
                 <p className="text-lg text-white font-semibold">{items.labels}</p>
                 <p className="text-sm text-gray-200">{items.description}</p>
+                {selectOption === items.labels && (
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">✓</span>
+                  </div>
+                )}
               </div>
             </div>
           ))}
