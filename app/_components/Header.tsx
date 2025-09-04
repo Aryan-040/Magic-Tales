@@ -22,8 +22,8 @@ function Header() {
       path: "/",
     },
     {
-      name: "Create a Tale",
-      path: "/create",
+      name: "Create Tales",
+      path: "/create-story",
     },
     {
       name: "Explore Tales",
